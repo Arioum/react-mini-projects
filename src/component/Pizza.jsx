@@ -1,11 +1,11 @@
-const Pizza = ({ name, photoName, ingredients, price, soldOu }) => {
+const Pizza = ({ name, photoName, ingredients, price, soldOut }) => {
   return (
-    <li className="pizza">
+    <li className={`pizza ${soldOut && 'sold-out'}`}>
       <img src={photoName} alt={name} />
       <div>
         <h3>{name}</h3>
         <p>{ingredients}</p>
-        <span>{price + 0.99}</span>
+        <span>{soldOut ? 'Sold out' : price + 0.99}</span>
       </div>
     </li>
   )
