@@ -1,11 +1,12 @@
-const Item = ({ item }) => {
-  const { quantity, description, packed } = item;
+const Item = ({ item, onDeleteItem }) => {
+  const { id, quantity, description, packed } = item;
+
   return (
     <li>
       <span style={packed ? { textDecoration: "line-through" } : {}}>
         {quantity} {description}
       </span>
-      <button>❌</button>
+      <button onClick={() => onDeleteItem(id)}>❌</button>
     </li>
   )
 }
