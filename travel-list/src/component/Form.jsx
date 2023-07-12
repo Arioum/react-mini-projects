@@ -12,7 +12,6 @@ const Form = ({ onAddItems }) => {
       description, quantity, packed: false, id: Date.now()
     }
     onAddItems(newItem);
-
     setDescription("");
     setQuantity(1);
   }
