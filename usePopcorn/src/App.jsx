@@ -10,6 +10,7 @@ import MovieList from "./components/MovieList";
 import WatchedSummary from "./components/WatchedSummary";
 import WatchedMovieList from "./components/WatchedMovieList";
 import StarRating from "./components/StarRating";
+import RatingBox from "./components/RatingBox";
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -33,6 +34,7 @@ export default function App() {
             messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]}
             defaultRating={3}
           />
+          <RatingBox />
           <WatchedMovieList watched={watched} />
         </Box>
       </Main>

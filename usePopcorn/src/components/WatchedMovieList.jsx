@@ -1,13 +1,13 @@
-import Movie from "./Movie"
+import Movie from "./Movie";
 
 const WatchedMovieList = ({ watched }) => {
   return (
-    <ul className="list">
-      {watched.map((movie) => (
-        <Movie movie={movie} />
+    <ul className='list'>
+      {watched.map((movie, index) => (
+        <Movie movie={movie} key={index} />
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default WatchedMovieList
+export default WatchedMovieList;
